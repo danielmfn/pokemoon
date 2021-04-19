@@ -1,0 +1,8 @@
+<div class="card-container">
+  <button mat-raised-button (click)="loadCards()">Carregar</button>
+  <div *ngIf="cards" fxLayout="row wrap" fxLayoutAling="start center">
+    <div *ngFor="let pokecard of cards; let i = index">
+      <img [src]="pokecard?.images?.large" alt="" height="420px">
+    </div>
+  </div>
+</div>
